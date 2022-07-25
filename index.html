@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="keywords" content="frontend mentor, frontend mentor solutions, fylo landing page solution">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  <script defer src="script.js"></script>
+</head>
+<body class="font-opensans font-normal text-dark">
+  <nav class="relative container mx-auto px-6 pt-6 flex flex-row items-center justify-between md:px-12 md:pt-14 lg:px-20 lg:pt-16 ">
+    <div class="logo min-w-max">
+      <img class="h-6 object-contain md:h-12" src="./images/logo.svg" alt="Fylo logo">
+    </div>
+    <div class="navmenu font-raleway text-xs leading-[0.875rem] flex flex-row gap-6 lg:gap-14 md:text-base md:leading-[1.125rem]">
+      <a class="navlink hover:cursor-pointer hover:text-hover hover:duration-200" href="#">Features</a> 
+      <a class="navlink hover:cursor-pointer hover:text-hover hover:duration-200" href="#">Team</a> 
+      <a class="navlink hover:cursor-pointer hover:text-hover hover:duration-200" href="#">Sign In</a>
+    </div>
+  </nav>
+
+  <section class="hero container mx-auto px-7 flex flex-col-reverse items-center pt-24 pb-[5.625rem] lg:px-20 lg:pb-[10.25rem] lg:flex-row">
+    <div class="left-text text-center flex flex-col lg:text-left lg:w-1/2 lg:self-start lg:mt-16">
+      <h1 class="font-raleway text-2xl leading-9 font-bold mt-10 lg:mt-0 md:text-4xl md:leading-[3.375rem] xl:text-[2.5rem] xl:leading-[3.75rem]">All your files in one secure location, accessible anywhere.</h1>
+
+      <p class="text-sm leading-5 px-3 mt-6 mb-8 lg:px-0 lg:mt-4 lg:mb-6 self-center md:max-w-lg xl:max-w-xl xl:text-lg xl:leading-6 md:text-base lg:self-start">Fylo stores your most important files in one secure location. 
+        Access them wherever you need, share and collaborate with friends, 
+        family, and co-workers.</p>
+      
+      <!-- form 1 -->
+      <form id="form" action="/" method="GET" name="form" class="w-full self-center max-w-xs flex flex-col px-2 lg:max-w-none lg:p-0 lg:self-start lg:flex-row">
+        
+        <div class="input-box w-full xl:w-80 flex flex-col items-start">
+          <input  id="email" type="text" name="email" placeholder="Enter your email…"
+            onleydown="validation()"
+            class="h-10 lg:h-11 pl-5 w-full xl:w-80 rounded border border-solid border-dark focus:border-cobalthover focus:outline focus:outline-cobalthover  invalid:border-rose  shadow-buttonShadow
+            placeholder:text-xs placeholder:text-[#C2C2C2] ">
+          
+            <span id="error-message" class="text-xs text-rose mt-1.5"></span>
+
+        </div>
+
+        <input type="submit" value="Get Started" 
+        class="h-10 lg:h-11 rounded bg-cobalt text-sm text-white font-bold mt-4 lg:mt-0 
+        shadow-buttonShadow hover:bg-cobalthover hover:cursor-pointer lg:w-[12.5rem] lg:mx-4 lg:mr-8">
+      </form>
+
+    </div>
+    <div class="right-image px-2 lg:px-0 lg:w-1/2">
+      <img src="./images/illustration-1.svg" alt="">
+    </div>
+  </section>
+
+  <section class="main bg-no-repeat bg-cover bg-center bg-[length:500%_100%] lg:bg-[length:350%_100%]" style="background-image:url(./images/bg-curve-desktop.svg)">
+    
+    <div class="main-container container mx-auto px-7 pt-24 flex flex-col-reverse items-center pb-20 lg:px-20 lg:pb-[6.75rem] lg:pt-40 lg:flex-row lg:justify-between ">
+      <div class="left-text text-center flex flex-col items-center lg:text-left lg:items-start lg:w-[57.5%] lg:pr-[3.625rem]">
+
+        <h2 class="font-raleway text-base leading-9 font-bold mt-10 lg:mt-0 md:text-4xl md:leading-[3.375rem] xl:text-[2.5rem] xl:leading-[3.75rem]">Stay productive, wherever you are</h2>
+        <p class="text-sm leading-5 px-3 mt-6 mb-4 lg:px-0  lg:mt-8 self-center md:max-w-[33rem] md:text-base lg:self-start">Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.</p>
+        <p class="text-sm leading-5 px-3 lg:px-0 md:max-w-[33rem] md:text-base lg:self-start">Securely share files and folders with friends, family and colleagues for 
+          live collaboration. No email attachments required!</p>
+        <a href="#" class="fylo-link group mt-8 mb-12 lg:mt-4">
+          <div class="flex flex-row  items-center justify-between text-xs lg:text-base text-lime group-hover:text-limehover">
+            <span>See how Fylo works</span>
+            <svg class="scale-75 lg:scale-100 lg:ml-2  group-hover:translate-x-1 group-hover:duration-500 " width="16" height="16"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <circle id="b" cx="6" cy="6" r="6"/>
+                <filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a">
+                  <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+                  <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+                  <feColorMatrix values="0 0 0 0 0.239215686 0 0 0 0 0.62745098 0 0 0 0 0.560784314 0 0 0 0.793506567 0" in="shadowBlurOuter1"/>
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(2 2)">
+                  <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+                  <!-- circle shape -->
+                  <use class="group-hover:fill-limehover" fill="#3DA08F" xlink:href="#b"/>
+                  <!-- circle shape -->
+                </g>
+                <path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#FFF"/>
+              </g>
+            </svg>
+          </div>
+          <hr class="mt-1.5 lg:mt-1 border-1 border-solid border-lime group-hover:border-limehover ">
+        </a>
+        <article class="card flex flex-col rounded shadow-cardShadow h-[10.5rem] w-[17.5rem] px-6 py-[1.375rem]  md:px-[2.125rem] md:py-[1.625rem] md:h-[13.5rem]  md:w-[22.25rem] bg-white">
+          <div class="quote-icon min-w-max">
+            <img class="h-2.5 md:h-3.5" src="./images/icon-quotes.svg" alt="">
+          </div>
+          <p class="text-left pt-1.5 pb-3 md:pt-2 md:pb-4 text-[0.625rem] leading-[1.125rem] md:text-sm md:leading-6">
+            Fylo has improved our team productivity by an order of magnitude. Since 
+            making the switch our team has become a well-oiled collaboration machine.
+          </p>
+          <div class="card-author flex flex-row">
+            <div class="avatar min-w-max">
+              <img class="h-6 rounded-full md:h-8" src="./images/avatar-testimonial.jpg" alt="">
+            </div>
+            <div class="author-name flex flex-col items-start justify-between ml-2 md:justify-center">
+              <span class="text-[0.563rem] leading-[0.765rem] font-bold md:text-[0.688rem] md:leading-[0.935rem]">Kyle Burton</span>
+              <span class="text-[0.375rem] leading-[0.7rem] md:text-[0.5rem] md:leading-[0.938rem]">Founder & CEO, Huddle</span>
+            </div>
+          </div>
+
+        </article>
+      </div>
+      <div class="right-image lg:w-[42.5%]">
+        <img src="./images/illustration-2.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="cta-section bg-light">
+    <div class="cta-section-container container mx-auto  px-7 pt-[3.375rem] pb-[4.5rem] lg:px-20 xl:pr-[7.5rem] lg:pt-[6.25rem] lg:pb-20 flex flex-col lg:flex-row lg:justify-between  items-center text-center lg:text-left">
+      <div class="flex flex-col lg-flex-row lg:w-3/5 xl:w-1/2 lg:mt-0 lg:mb-0">
+        <span class="font-raleway font-bold text-white text-lg leading-6  md:text-[2rem] md:leading-[3rem]">Get early access today</span>
+        <p class="text-white text-sm leading-5 px-12 mt-6 
+        lg:px-0 lg:mt-4 md:max-w-lg md:text-base">
+          It only takes a minute to sign up and our free starter tier is extremely generous. 
+          If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <!-- form 2 -->
+      <form id="form-2" class="w-60 flex mt-8 lg:mt-0 lg:mb-0  lg:ml-8 flex-col lg:w-2/5 xl:w-1/2 lg:max-w-[30rem]" action="#">
+        <input id="email-2" type="text" placeholder="Enter your email…" 
+        class="h-8 w-full lg:h-12 pl-2 lg:pl-[1.375rem] rounded focus:outline focus:outline-cobalthover focus:invalid:outline-0 invalid:border invalid:border-rose shadow-buttonShadow
+        placeholder:text-xs placeholder:text-[#C2C2C2]">
+        <span id="error-message-2" class="self-start text-xs text-white mt-1.5"></span>
+
+        <input type="submit" value="Get Started For Free" 
+        class="h-8 lg:h-12 rounded bg-cobalt text-[0.625rem]  md:text-sm text-white font-bold mt-2 lg:mt-4 
+        shadow-buttonShadow hover:bg-cobalthover hover:cursor-pointer lg:w-[12.5rem] ">
+      </form>
+    </div>
+  </section>
+  <footer class="bg-dark">
+    <div class="footer-container container mx-auto px-10 pt-16 pb-11 lg:px-20 lg:pt-[5.75rem] lg:pb-[5.375rem] xl:pr-[16.5rem] text-base text-white">
+      <div class="logo-footer h-8 lg:h-10 -ml-8 mb-8 lg:mb-9  lg:-ml-5 flex flex-row items-center">
+        <svg class="text-white scale-[0.62] lg:scale-[0.8]" width="166" height="49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <path id="a" d="M.014.03h93.96v48.29H.015z"/>
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <path d="M0 14.13v.123l27.95 13.13L56 14.209v-.033L27.95 1 0 14.13zm10.077.062L27.95 
+            5.795l17.877 8.397-17.877 8.396-17.874-8.396zM27.95 32.483L0 19.55v4.784l27.95 12.964L56 
+            24.289v-4.784L27.95 32.483zm0 9.703L0 29.25v4.783L27.95 47 56 33.99v-4.784l-28.05 12.98z" fill="currentcolor"/>
+            <g transform="translate(72)">
+              <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+              </mask>
+              <path d="M87.56 24.152a8.1 8.1 0 0 0-2.161-5.573 7.259 7.259 0 0 0-2.34-1.673 
+              6.864 6.864 0 0 0-2.85-.601c-1.01 0-1.961.2-2.852.601a7.257 7.257 0 0 0-2.34 1.673 8.102 
+              8.102 0 0 0-2.16 5.574 8.102 8.102 0 0 0 2.16 5.573 7.257 7.257 0 0 0 2.34 1.672 6.864 6.864 
+              0 0 0 2.851.602c1.01 0 1.96-.2 2.852-.602a7.259 7.259 0 0 0 2.339-1.672 8.1 8.1 0 0 0 2.16-5.574zm6.415 
+              0c0 1.932-.357 3.723-1.07 5.373a13.098 13.098 0 0 1-2.94 4.28c-1.247 1.205-2.71 2.156-4.388 2.854-1.678.699-3.468 1.048-5.369 
+              1.048-1.9 0-3.683-.349-5.346-1.048a13.863 13.863 0 0 1-4.366-2.876 13.351 13.351 0 0 1-2.94-4.302c-.713-1.65-1.07-3.426-1.07-5.329 0-1.873.364-3.634 1.092-5.284a13.92 13.92 0 0 1 2.962-4.325 13.671 13.671 0 0 1 4.367-2.898 13.552 13.552 0 0 1 
+              5.301-1.048c1.901 0 3.69.35 5.369 1.048 1.678.698 3.14 1.65 4.388 2.854 1.248 1.204 2.228 2.638 2.94 4.302.713 1.665 1.07 3.449 1.07 5.351zM64.258 36.905a8.6 8.6 0 0 1-1.715.58c-.638.148-1.3.222-1.982.222a9.84 9.84 0 0 1-2.74-.379 6.003 6.003 0 0 
+              1-2.295-1.226c-.653-.565-1.173-1.3-1.56-2.207-.385-.907-.578-2-.578-3.277V.029h6.549v29.474c0 1.07.215 1.806.646 2.207.43.401.943.602 1.537.602.742 0 1.455-.223 2.138-.669v5.262zM50.492 11.22L38.908 41.854c-.861 2.289-1.99 3.939-3.386 4.95-1.396 1.01-3.06 
+              1.515-4.99 1.515-.297 0-.623-.022-.98-.066a7.352 7.352 0 0 1-1.025-.201l-2.138-5.975a8.486 8.486 0 0 0 1.56.557c.534.134 1.039.201 1.514.201 1.01 0 1.93-.23 2.762-.691.832-.46 1.47-1.315 1.916-2.564l.891-2.586-9.935-25.773h6.995l5.925 16.588 
+              5.57-16.588h6.905zM23.538 7.342H6.786v8.294h16.529v5.618H6.785v15.784H.015V1.412h23.524v5.93z" fill="currentcolor" mask="url(#b)"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="footer-menu-container flex flex-col lg:flex-row lg:justify-between lg:items-start">
+        <div class="contact-info max-w-max mb-8">
+          <div class="icon-phone flex flex-row items-center mb-4">
+            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z" fill="#FFF" fill-rule="evenodd"/></svg>
+            <p class="ml-5">Phone: +1-543-123-4567</p> 
+          </div>
+
+          <div class="icon-email flex flex-row items-center">
+            <svg width="20" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z" fill="#FFF" fill-rule="evenodd"/></svg>
+            <p class="ml-[1.125rem]">example@fylo.com</p> 
+          </div>
+        </div>
+        <div class="footer-menu-1 flex flex-col gap-3.5 max-w-max mb-8 lg:mb-0">
+          <a href="#" class="about-us hover:text-hover hover:duration-200">About Us</a>
+          <a href="#" class="jobs hover:text-hover hover:duration-200">Jobs</a>
+          <a href="#" class="press hover:text-hover hover:duration-200">Press</a>
+          <a href="#" class="blog hover:text-hover hover:duration-200">Blog</a>
+        </div>
+        <div class="footer-menu-1 flex flex-col gap-3.5 max-w-max mb-8 lg:mb-0">
+          <a href="" class="contact-us hover:text-hover hover:duration-200">Contact Us</a>
+          <a href="" class="terms hover:text-hover hover:duration-200">Terms</a>
+          <a href="" class="privacy hover:text-hover hover:duration-200">Privacy</a>
+        </div>
+        <div class="social-links self-center lg:self-start flex flex-row gap-2.5 lg:gap-3">
+          <a href="#" class="icon-fb relative max-w-max h-8 group cursor-pointer">
+            <svg class="absolute mx-auto inset-x-0 my-auto inset-y-0 text-white h-4 group-hover:text-cobalthover group-hover:text-hover group-hover:duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" fill="currentcolor"/></svg>
+            <span class=" dot border border-white inline-block h-full w-8 rounded-full border group-hover:border-cobalthover group-hover:text-hover group-hover:duration-200"></span>
+          </a>
+          <a href="#" class="icon-tw relative max-w-max h-8 group cursor-pointer">
+            <svg class="absolute mx-auto inset-x-0 my-auto inset-y-0 ml-[0.6rem] text-white h-[0.938rem] group-hover:text-cobalthover group-hover:text-hover group-hover:duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            <span class=" dot border border-white inline-block h-full w-8 rounded-full border group-hover:border-cobalthover group-hover:text-hover group-hover:duration-200"></span>
+          </a>
+          <a href="#" class="icon-in relative max-w-max h-8 group cursor-pointer">
+            <svg class="absolute mx-auto inset-x-0 my-auto inset-y-0 ml-[0.538rem] text-white h-[1.125rem] group-hover:text-cobalthover group-hover:text-hover group-hover:duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            <span class=" dot border border-white inline-block h-full w-8 rounded-full border group-hover:border-cobalthover group-hover:text-hover group-hover:duration-200"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
